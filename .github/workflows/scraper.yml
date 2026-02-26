@@ -9,7 +9,7 @@ jobs:
   scrape-bitcoin:
     runs-on: ubuntu-latest
     env:
-      TZ: America/New_York  # Set your local timezone if needed
+      TZ: America/New_York
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-        python-version: '3.11'
+          python-version: '3.11'  # <--- This must be indented!
 
       - name: Install dependencies
         run: |
